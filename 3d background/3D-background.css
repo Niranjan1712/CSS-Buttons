@@ -1,0 +1,56 @@
+body{
+    background: #000033;
+    margin: 0;
+    padding: 0;
+}
+/*----button start----------------------------------*/
+.btn{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 136px;
+} 
+.btn a{
+    position: relative;
+    text-decoration: none;
+    color: honeydew;
+    text-align: center;
+    width: 100px;
+    padding: 10px;  
+    overflow: hidden;
+}
+.btn a span:nth-child(1){
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    width: 118px;
+    height: 37px;
+    clip-path: polygon(97% 91%, 100% 0, 100% 100%, 0% 100%);
+    background: #03A9F4;
+    z-index: -1;
+    transition: all 1s;
+}
+.btn a span:nth-child(2){
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    width: 118px;
+    height: 37px;
+    clip-path: polygon(97% 91%, 100% 0, 100% 100%, 0% 100%);
+    transform: rotate(180deg);
+    background-color: #03A9F4;
+    z-index: -1;
+    transition: all 1s;
+}
+.btn a:hover span:nth-child(1){
+    right: 0;
+    top: 1.5px;
+}
+.btn a:hover span:nth-child(2){
+    right: 0;
+    top: 1.5px;
+}
+/*----button end-------------------------------------*/
+
+

@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    background-color: White;    
+}
+.container{   
+    margin-top: 40px;
+    text-align: center;    
+} 
+.btn{
+    margin-top: 20px;
+    padding: 10px;
+    width: 120px;
+    outline:none;
+    border: 2px solid #0099FF;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    color:black;
+}
+.btn::before{
+    content: "";
+    background-color: #0099FF;
+    border: 2px solid yellow;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -35px;
+    left: -100px;
+    z-index: -1;
+    transform: rotate(45deg);
+    transition: all 1s;
+   
+}
+.btn::after{
+    content: "";
+    background-color: #283593;
+    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -35px;
+    left: -105px;
+    z-index: -1;
+    transform: rotate(45deg);
+    transition: all 1s;
+   
+}
+.btn:hover::before{
+    top: -35px;
+    left: -10px;
+}
+.btn:hover::after{
+    top: -35px;
+    left: -15px;
+}
+.btn:hover{
+    color: white;
+}

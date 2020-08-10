@@ -1,0 +1,66 @@
+body{
+    background: #000033;
+    margin: 0;
+    padding: 0;
+}
+/*----button start----------------------------------*/
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 136px;
+} 
+.btn a{
+    position: relative;
+    text-decoration: none;
+    color: honeydew;
+    text-align: center;
+    border: 2px solid;
+    width: 100px;
+    padding: 10px;  
+    overflow: hidden;
+}
+.btn a span:nth-child(1){
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    height: 30px;
+    width: 210%;
+    border-radius: -80%;
+    background: #039BE5;
+    z-index: -1;
+    display: none;
+}
+
+@keyframes anima1{
+    0% {transform: translate(-50%, -75%) rotate(0deg);}
+    100% {transform: translate(-50%, -75%) rotate(45deg);}
+
+}
+.btn a span:nth-child(2){
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 30px;
+    width: 210%;
+    border-radius: -80%;
+    background: #0D47A1;
+    display: none;
+    z-index: -1;
+}
+@keyframes anima2{
+    0% {transform: translate(-50%, -75%) rotate(0deg);}
+    100% {transform: translate(-50%, -75%) rotate(180deg);}
+}
+
+.btn a:hover span:nth-child(1){
+    animation: anima1 10s linear infinite;
+    display: block;
+}
+.btn a:hover span:nth-child(2){
+    animation: anima2 10s linear infinite;
+    display: block;
+}
+/*----button end-------------------------------------*/
+
+

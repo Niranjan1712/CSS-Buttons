@@ -1,0 +1,85 @@
+body{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.button{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button a{
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+.button a span:nth-child(1){
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to left,#FF0000 50%, black);
+}
+@keyframes child1{
+    0% {transform: translateX(-100%);}
+}
+.button a span:nth-child(2){
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, #FF0000 50%, black);
+}
+@keyframes child2{
+    0% {transform: translateY(-100%);}
+}
+.button a span:nth-child(3){
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #FF0000 50%, black);
+}
+@keyframes child3{
+    0% {transform: translateX(100%);}
+}
+.button a span:nth-child(4){
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, #FF0000 50%, black);
+
+}
+@keyframes child4{
+    0% {transform: translateY(100%);}
+}
+.button a:hover span:nth-child(1){
+    animation: child1 1500ms linear;
+    display: block;
+    
+}
+.button a:hover span:nth-child(2){
+    animation: child2 1s linear 1500ms;
+    display: block;
+}
+.button a:hover span:nth-child(3){
+    animation: child3 1500ms linear 2500ms;
+    display: block;
+    
+}
+.button a:hover span:nth-child(4){
+    animation: child4 1s linear 4000ms;
+    display: block;
+    
+}

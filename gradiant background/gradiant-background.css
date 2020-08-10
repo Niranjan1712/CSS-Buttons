@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #090030;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 136px;
+    margin-top: 15px;
+} 
+.btn a{
+    position: relative;
+    margin: auto;
+    width: 100px;
+    background-color: #f30a49;
+    text-decoration: none;
+    padding: 10px;
+    color: honeydew;    
+    text-align: center;
+}
+
+@keyframes boxanimation {
+    0%{ background-position: 0% 0%; }
+    50%{ background-position: 300% 0%; }
+    100%{ background-position:0% 0%; }
+
+}
+.btn a:hover span{
+    top: -2px;
+    left: -2px;
+    position: absolute;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    background: linear-gradient(45deg,
+    #FF00CC,
+    #33FFCC,
+    #FFFF00,
+    #FF00CC,
+    #33FFCC,
+    #FFFF00);
+    background-size: 300%;
+    z-index: -1;
+    filter: blur(5px);
+    animation: boxanimation 10s linear infinite;
+}
+
